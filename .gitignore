@@ -3,6 +3,7 @@
 /.**
 
 ### ===== not ignore ===== ###
+!/.gitconfig
 !/Brewfile
 !/.zshrc
 !/.zimrc
@@ -18,6 +19,7 @@
 # .config
 !/.config/
 !/.config/**
+/.config/**/.DS_Store
 
 !/.tmux.conf
 !/.hyper.js

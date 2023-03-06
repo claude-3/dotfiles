@@ -6,7 +6,8 @@
 # zim
 .zimrc ${HOME}/.zimrc
 
-# git (.config)
+# git
+.gitconfig ${HOME}/.gitconfig
 git ${HOME}/.config/git
 
 # nvim
