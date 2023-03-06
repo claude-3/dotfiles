@@ -1,0 +1,13 @@
+tap "homebrew/bundle"
+tap "homebrew/cask"
+tap "homebrew/cask-fonts"
+tap "homebrew/core"
+brew "fd"
+brew "git"
+brew "jq"
+brew "neovim", args: ["HEAD"]
+brew "ripgrep"
+brew "tmux"
+cask "chromedriver"
+cask "font-hack-nerd-font"
+cask "hammerspoon"

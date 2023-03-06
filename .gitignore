@@ -1,0 +1,26 @@
+### ===== ignore all ===== ###
+/*
+/.**
+
+### ===== not ignore ===== ###
+!/Brewfile
+!/.zshrc
+!/.zimrc
+
+!/linklist.txt
+!/link.sh
+!/setup.sh
+
+!/.gitignore
+!/README.md
+!/LICENSE
+
+# .config
+!/.config/
+!/.config/**
+
+!/.tmux.conf
+!/.hyper.js
+!/.wezterm.lua
+!/.hammerspoon/
+!/.hammerspoon/**

@@ -1,0 +1,31 @@
+# #以降と空行はlink.shで消去するので影響なし
+
+# zsh
+.zshrc ${HOME}/.zshrc
+
+# zim
+.zimrc ${HOME}/.zimrc
+
+# git (.config)
+git ${HOME}/.config/git
+
+# nvim
+nvim ${HOME}/.config/nvim
+
+# alacritty
+alacritty ${HOME}/.config/alacritty
+
+# kitty
+kitty ${HOME}/.config/kitty
+
+# hammerspoon
+.hammerspoon ${HOME}/.hammerspoon
+
+# hyper
+.hyper.js ${HOME}/.hyper.js
+
+# tmux
+.tmux.conf ${HOME}/.tmux.conf
+
+# wezterm
+.wezterm.lua ${HOME}/.wezterm.lua
