@@ -31,6 +31,9 @@ which brew >/dev/null 2>&1 && brew cleanup --verbose
 # echo "プログラミング言語をインストールします..."
 # ./_asdf.sh
 
+# .configフォルダを用意
+mkdir ~/.config
+
 ### シンボリックリンクの作成
 echo "シンボリックリンクを作成します..."
 ./_link.sh

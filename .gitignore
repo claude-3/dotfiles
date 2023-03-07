@@ -9,7 +9,7 @@
 !/.zimrc
 
 !/linklist.txt
-!/link.sh
+!/_link.sh
 !/setup.sh
 
 !/.gitignore
