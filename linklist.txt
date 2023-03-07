@@ -8,16 +8,19 @@
 
 # git
 .gitconfig ${HOME}/.gitconfig
-git ${HOME}/.config/git
+#git ${HOME}/.config/git
+
+# .config all
+.config ${HOME}/.config
 
 # nvim
-nvim ${HOME}/.config/nvim
+#nvim/ ${HOME}/.config/nvim
 
 # alacritty
-alacritty ${HOME}/.config/alacritty
+#alacritty ${HOME}/.config/alacritty
 
 # kitty
-kitty ${HOME}/.config/kitty
+#kitty ${HOME}/.config/kitty
 
 # hammerspoon
 .hammerspoon ${HOME}/.hammerspoon

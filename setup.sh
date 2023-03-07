@@ -6,6 +6,14 @@ xcode-select --install
 # rosetta install
 sudo softwareupdate --install-rosetta --agree-to-licensesudo softwareupdate --install-rosetta --agree-to-license
 
+
+# .configフォルダを用意
+mkdir ~/.config
+
+### シンボリックリンクの作成
+echo "シンボリックリンクを作成します..."
+./_link.sh
+
 #------------------------------------------
 # homebrew(arm64)
 #------------------------------------------
@@ -30,12 +38,5 @@ which brew >/dev/null 2>&1 && brew cleanup --verbose
 ### プログラミング言語のインストール
 # echo "プログラミング言語をインストールします..."
 # ./_asdf.sh
-
-# .configフォルダを用意
-mkdir ~/.config
-
-### シンボリックリンクの作成
-echo "シンボリックリンクを作成します..."
-./_link.sh
 
 exec $SHELL -l
