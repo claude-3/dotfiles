@@ -1,4 +1,5 @@
 -- ショートカットキーとアプリの紐付け設定
+-- ※Raycastで簡単に設定できたので、一旦使用を中止
 -- --------------------
 local app_map = {}
 
@@ -12,10 +13,10 @@ local function registerAppLauncer(modifier, app)
 	end)
 end
 
-registerAppLauncer("C", "Google Chrome")
+-- registerAppLauncer("C", "Google Chrome")
 -- registerAppLauncer("I", "iterm")
-registerAppLauncer("N", "Notion")
-registerAppLauncer("T", "Alacritty")
+-- registerAppLauncer("N", "Notion")
+-- registerAppLauncer("T", "Alacritty")
 
 -- IME切り替え
 -- --------------------
