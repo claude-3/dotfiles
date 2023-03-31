@@ -20,6 +20,7 @@
 !/.config/
 !/.config/**
 /.config/raycast/
+/.config/raycast/**
 /.config/**/.DS_Store
 
 !/.tmux.conf
