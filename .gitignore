@@ -21,6 +21,8 @@
 !/.config/**
 /.config/raycast/
 /.config/raycast/**
+/.config/github-copilot/
+/.config/github-copilot/**
 /.config/**/.DS_Store
 
 !/.tmux.conf
