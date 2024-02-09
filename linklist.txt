@@ -19,17 +19,8 @@
 # alacritty
 #alacritty ${HOME}/.config/alacritty
 
-# kitty
-#kitty ${HOME}/.config/kitty
-
-# hammerspoon
-.hammerspoon ${HOME}/.hammerspoon
-
 # hyper
 .hyper.js ${HOME}/.hyper.js
 
 # tmux
 .tmux.conf ${HOME}/.tmux.conf
-
-# wezterm
-.wezterm.lua ${HOME}/.wezterm.lua

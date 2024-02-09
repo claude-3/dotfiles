@@ -169,3 +169,11 @@ fi
 unset __conda_setup
 # <<< conda initialize <<<
 
+export PATH="/opt/homebrew/opt/postgresql@15/bin:$PATH"
+
+# bun completions
+[ -s "/Users/iatik/.bun/_bun" ] && source "/Users/iatik/.bun/_bun"
+
+# bun
+export BUN_INSTALL="$HOME/.bun"
+export PATH="$BUN_INSTALL/bin:$PATH"
