@@ -27,3 +27,5 @@
 
 !/.tmux.conf
 !/.hyper.js
+!_common.sh
+!_unlink.sh
