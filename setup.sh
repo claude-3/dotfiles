@@ -8,11 +8,14 @@ sudo softwareupdate --install-rosetta --agree-to-licensesudo softwareupdate --in
 
 
 # .configフォルダを用意
-mkdir ~/.config
+# mkdir ~/.config
 
-### シンボリックリンクの作成
-echo "シンボリックリンクを作成します..."
-./_link.sh
+## シンボリックリンクの作成
+# echo "シンボリックリンクを作成します..."
+# ./_setup/_link.sh
+ln -s ~/dotfiles/.zshrc ~/.zshrc
+ln -s ~/dotfiles/.zimrc ~/.zimrc
+source ~/.zshrc
 
 #------------------------------------------
 # homebrew(arm64)
