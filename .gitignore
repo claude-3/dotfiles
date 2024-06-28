@@ -1,31 +1,29 @@
 ### ===== ignore all ===== ###
-/*
-/.**
+*
+# /*
+# /.**
 
 ### ===== not ignore ===== ###
-!/.gitconfig
+!/setup.sh
 !/.Brewfile
 !/.zshrc
 !/.zimrc
-
-!/linklist.txt
-!/_link.sh
-!/setup.sh
-
 !/.gitignore
+
 !/README.md
 !/LICENSE
 
-# .config
-!/.config/
-!/.config/**
-/.config/raycast/
-/.config/raycast/**
-/.config/github-copilot/
-/.config/github-copilot/**
-/.config/**/.DS_Store
+!/_setup/
+/_setup/.DS_Store
+!/others/
+/others/.DS_Store
 
-!/.tmux.conf
-!/.hyper.js
-!_common.sh
-!_unlink.sh
+!/config/.config/nvim/
+/config/.config/nvim/.DS_Store
+!/config/.config/alacritty/alacritty.toml
+!/config/.config/git/ignore
+!/config/.config/kitty/current-theme.conf
+!/config/.config/kitty/kitty.conf
+!/config/.config/skhd/skhdrc
+!/config/.config/yabai/yabairc
+!/config/.config/zed/settings.json
