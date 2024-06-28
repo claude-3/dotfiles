@@ -4,26 +4,39 @@
 # /.**
 
 ### ===== not ignore ===== ###
+!/.gitignore
 !/setup.sh
 !/.Brewfile
 !/.zshrc
 !/.zimrc
-!/.gitignore
 
 !/README.md
 !/LICENSE
 
 !/_setup/
-/_setup/.DS_Store
-!/others/
-/others/.DS_Store
+!/_setup/**
 
+!/others/
+!/others/**
+
+!/config/
+!/config/.config/
 !/config/.config/nvim/
-/config/.config/nvim/.DS_Store
+!/config/.config/nvim/**
+
+!/config/.config/alacritty/
 !/config/.config/alacritty/alacritty.toml
+!/config/.config/git/
 !/config/.config/git/ignore
-!/config/.config/kitty/current-theme.conf
+!/config/.config/kitty/
 !/config/.config/kitty/kitty.conf
+!/config/.config/kitty/current-theme.conf
+!/config/.config/skhd/
 !/config/.config/skhd/skhdrc
+!/config/.config/yabai/
 !/config/.config/yabai/yabairc
+!/config/.config/zed/
 !/config/.config/zed/settings.json
+
+# Ignore all .DS_Store files
+*.DS_Store

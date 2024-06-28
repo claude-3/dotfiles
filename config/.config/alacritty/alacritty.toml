@@ -1,0 +1,24 @@
+[colors.normal]
+blue = "#42C2F9"
+cyan = "#28DFDF"
+green = "#2CDDA8"
+red = "#F14242"
+yellow = "#F1E925"
+
+[colors.primary]
+# background = "#021920"
+
+[env]
+TERM = "xterm-256color"
+
+[font]
+size = 18.0
+
+[font.normal]
+family = "Hack Nerd Font"
+style = "Regular"
+
+[window]
+padding = { x = 8, y = 8 }
+opacity = 0.9
+decorations = "Buttonless"
