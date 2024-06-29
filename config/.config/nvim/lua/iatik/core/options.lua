@@ -23,6 +23,7 @@ opt.splitright = true
 opt.splitbelow = true
 
 opt.wrap = true
+opt.scrolloff = 10
 
 -- search settings
 -- opt.ignorecase = true
@@ -35,3 +36,5 @@ opt.cursorline = true
 opt.termguicolors = true
 opt.background = "dark" -- colorschemes that can be light or dark
 opt.signcolumn = "yes" -- show sign column so that text doesn't shift
+
+opt.wildignore:append({ "*/node_modules/*" })
