@@ -22,3 +22,4 @@ style = "Regular"
 padding = { x = 8, y = 8 }
 opacity = 0.9
 decorations = "Buttonless"
+option_as_alt = "Both" # for Zellij keybindings
