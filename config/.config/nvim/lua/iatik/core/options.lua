@@ -36,5 +36,7 @@ opt.cursorline = true
 opt.termguicolors = true
 opt.background = "dark" -- colorschemes that can be light or dark
 opt.signcolumn = "yes" -- show sign column so that text doesn't shift
+-- opt.winblend = 40 -- window opacity (0-100)
+-- opt.pumblend = 40 -- popup menu opacity (0-100)
 
 opt.wildignore:append({ "*/node_modules/*" })
