@@ -24,6 +24,8 @@
 !/config/.config/nvim/
 !/config/.config/nvim/**
 
+!/config/.config/starship.toml
+
 !/config/.config/alacritty/
 !/config/.config/alacritty/alacritty.toml
 !/config/.config/git/
