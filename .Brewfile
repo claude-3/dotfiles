@@ -3,7 +3,6 @@ tap "homebrew/cask-fonts"
 tap "homebrew/services"
 tap "jesseduffield/lazygit"
 tap "koekeishiya/formulae"
-tap "oven-sh/bun"
 brew "bat"
 brew "fd"
 brew "fzf"
@@ -29,25 +28,19 @@ cask "alacritty", args: { appdir: "/Applications" }
 cask "appcleaner", args: { appdir: "/Applications" }
 cask "arc", args: { appdir: "/Applications" }
 cask "bitwarden", args: { appdir: "/Applications" }
-cask "brave-browser", args: { appdir: "/Applications" }
 cask "chromedriver", args: { appdir: "/Applications" }
-cask "clipy", args: { appdir: "/Applications" }
 cask "cursor", args: { appdir: "/Applications" }
 cask "discord", args: { appdir: "/Applications" }
 cask "figma", args: { appdir: "/Applications" }
 cask "firefox", args: { appdir: "/Applications" }
 cask "font-hack-nerd-font", args: { appdir: "/Applications" }
 cask "font-noto-sans-jp", args: { appdir: "/Applications" }
-cask "freeplane"
 cask "google-chrome", args: { appdir: "/Applications" }
 cask "hot", args: { appdir: "/Applications" }
 cask "iterm2", args: { appdir: "/Applications" }
-cask "kitty", args: { appdir: "/Applications" }
 cask "logseq"
-cask "microsoft-edge"
 cask "min"
 cask "miniforge", args: { appdir: "/Applications" }
-cask "notion", args: { appdir: "/Applications" }
 cask "obsidian", args: { appdir: "/Applications" }
 cask "postman", args: { appdir: "/Applications" }
 cask "proxyman", args: { appdir: "/Applications" }
