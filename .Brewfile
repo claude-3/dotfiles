@@ -1,5 +1,4 @@
 tap "homebrew/bundle"
-tap "homebrew/cask-fonts"
 tap "homebrew/services"
 tap "jesseduffield/lazygit"
 tap "koekeishiya/formulae"
@@ -27,6 +26,7 @@ brew "koekeishiya/formulae/yabai"
 cask "alacritty", args: { appdir: "/Applications" }
 cask "appcleaner", args: { appdir: "/Applications" }
 cask "arc", args: { appdir: "/Applications" }
+cask "aural"
 cask "bitwarden", args: { appdir: "/Applications" }
 cask "chromedriver", args: { appdir: "/Applications" }
 cask "cursor", args: { appdir: "/Applications" }
