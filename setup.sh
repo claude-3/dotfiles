@@ -1,46 +1,42 @@
 #!/bin/bash
 
+set -e  # エラーが発生した時点でスクリプトを終了
+
 echo "Xcodeをインストールします..."
-xcode-select --install
+xcode-select --install || true  # インストール済みの場合のエラーを無視
 
-# rosetta install
-sudo softwareupdate --install-rosetta --agree-to-licensesudo softwareupdate --install-rosetta --agree-to-license
+# Rosetta install
+echo "Rosettaをインストールします..."
+sudo softwareupdate --install-rosetta --agree-to-license
 
-
-# .configフォルダを用意
-# mkdir ~/.config
-
-## シンボリックリンクの作成
-# echo "シンボリックリンクを作成します..."
-# ./_setup/_link.sh
-ln -s ~/dotfiles/.zshrc ~/.zshrc
-ln -s ~/dotfiles/.zimrc ~/.zimrc
-source ~/.zshrc
+# シンボリックリンクの作成
+echo "zsh関連のシンボリックリンクを作成します..."
+ln -sf ~/dotfiles/.zshrc ~/.zshrc
+ln -sf ~/dotfiles/.zimrc ~/.zimrc
 
 #------------------------------------------
 # homebrew(arm64)
 #------------------------------------------
 echo "homebrewをインストールします..."
-which /opt/homebrew/bin/brew >/dev/null 2>&1 || /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+if ! command -v brew &> /dev/null; then
+    /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+else
+    echo "Homebrewは既にインストールされています。"
+fi
 
 echo "brew doctorを実行します..."
-which /opt/homebrew/bin/brew >/dev/null 2>&1 && brew doctor
+brew doctor
 
 echo "brew updateを実行します..."
-which /opt/homebrew/bin/brew >/dev/null 2>&1 && brew update --verbose
+brew update --verbose
 
 echo "brew upgradeを実行します..."
-which /opt/homebrew/bin/brew >/dev/null 2>&1 && brew upgrade --verbose
+brew upgrade --verbose
 
 echo ".Brewfileで管理しているアプリケーションをインストールします..."
-which /opt/homebrew/bin/brew >/dev/null 2>&1 && brew bundle --file ./.Brewfile --verbose
+brew bundle --file ~/dotfiles/.Brewfile --verbose
 
 echo "brew cleanupを実行します..."
-which brew >/dev/null 2>&1 && brew cleanup --verbose
+brew cleanup --verbose
 
-### プログラミング言語のインストール
-# echo "プログラミング言語をインストールします..."
-# ./_asdf.sh
-
-
-exec $SHELL -l
+echo "セットアップが完了しました。新しい設定を適用するには、ターミナルを再起動してください。"

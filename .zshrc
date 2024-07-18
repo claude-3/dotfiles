@@ -145,7 +145,8 @@ function iterm2_print_user_vars() {
 
 
 # Homebrew
-export PATH="/opt/homebrew/bin:$PATH"
+# export PATH="/opt/homebrew/bin:$PATH"
+eval "$(/opt/homebrew/bin/brew shellenv)"
 
 # Starship prompt
 eval "$(starship init zsh)"
