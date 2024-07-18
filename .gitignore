@@ -6,6 +6,7 @@
 ### ===== not ignore ===== ###
 !/.gitignore
 !/setup.sh
+!/setting_mac.sh
 !/.Brewfile
 !/.zshrc
 !/.zimrc
