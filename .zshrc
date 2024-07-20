@@ -181,5 +181,7 @@ export PATH="/opt/homebrew/opt/postgresql@15/bin:$PATH"
 export BUN_INSTALL="$HOME/.bun"
 export PATH="$BUN_INSTALL/bin:$PATH"
 
+# eslint_d
+export ESLINT_USE_FLAT_CONFIG=true
 
 eval "$(zoxide init zsh)"
