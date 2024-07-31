@@ -184,4 +184,8 @@ export PATH="$BUN_INSTALL/bin:$PATH"
 # eslint_d
 export ESLINT_USE_FLAT_CONFIG=true
 
+# thefuck
+eval $(thefuck --alias)
+
+# zoxide
 eval "$(zoxide init zsh)"
