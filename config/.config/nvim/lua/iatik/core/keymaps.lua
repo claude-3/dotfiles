@@ -3,12 +3,13 @@ vim.g.mapleader = " "
 local keymap = vim.keymap -- for conciseness
 
 keymap.set("i", "jj", "<ESC>")
+keymap.set("i", "<C-l>", "<Right>")
 keymap.set("n", "H", "^")
 keymap.set("n", "L", "$")
 keymap.set("n", "K", "10k")
 keymap.set("n", "J", "10j")
 
-keymap.set("n", "<leader>nh", ":nohl<CR>", { desc = "Clear search highlights (No Highlights)"})
+keymap.set("n", "<leader>nh", ":nohl<CR>", { desc = "Clear search highlights (No Highlights)" })
 
 -- increment/decrement numbers
 keymap.set("n", "<leader>+", "<C-a>", { desc = "Increment number" })
