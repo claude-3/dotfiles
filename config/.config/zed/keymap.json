@@ -10,12 +10,31 @@
     "context": "Workspace",
     "bindings": {
       // "shift shift": "file_finder::Toggle"
+      "space f f": "file_finder::Toggle",
+      "space f s": "workspace::NewSearch",
+      "space e e": "project_panel::ToggleFocus",
+      "ctrl-t k": ["workspace::ActivatePaneInDirection", "Up"],
+      "ctrl-t h": ["workspace::ActivatePaneInDirection", "Left"],
+      "ctrl-t j": ["workspace::ActivatePaneInDirection", "Down"],
+      "ctrl-t l": ["workspace::ActivatePaneInDirection", "Right"]
     }
   },
   {
     "context": "Editor",
     "bindings": {
       // "j k": ["workspace::SendKeystrokes", "escape"]
+    }
+  },
+  {
+    "context": "Terminal",
+    "bindings": {
+      // "ctrl-t k": ["workspace::ActivatePaneInDirection", "Up"]
+    }
+  },
+  {
+    "context": "ProjectPanel",
+    "bindings": {
+      // "ctrl-t l": ["workspace::ActivatePaneInDirection", "Right"]
     }
   },
   {
