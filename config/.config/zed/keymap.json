@@ -10,9 +10,6 @@
     "context": "Workspace",
     "bindings": {
       // "shift shift": "file_finder::Toggle"
-      "space f f": "file_finder::Toggle",
-      "space f s": "workspace::NewSearch",
-      "space e e": "project_panel::ToggleFocus",
       "ctrl-t k": ["workspace::ActivatePaneInDirection", "Up"],
       "ctrl-t h": ["workspace::ActivatePaneInDirection", "Left"],
       "ctrl-t j": ["workspace::ActivatePaneInDirection", "Down"],
@@ -48,7 +45,12 @@
     "context": "vim_mode == normal",
     "bindings": {
       "shift-h": "vim::FirstNonWhitespace",
-      "shift-l": "vim::EndOfLine"
+      "shift-l": "vim::EndOfLine",
+      "space f f": "file_finder::Toggle",
+      "space f s": "workspace::NewSearch",
+      "space e e": "workspace::ToggleLeftDock",
+      "ctrl-h": "pane::ActivatePrevItem",
+      "ctrl-l": "pane::ActivateNextItem"
     }
   }
 ]

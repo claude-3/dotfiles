@@ -20,5 +20,18 @@
   "buffer_font_size": 16,
   "buffer_font_family": "Hack Nerd Font",
   "relative_line_numbers": true,
-  "soft_wrap": "editor_width"
+  "soft_wrap": "editor_width",
+  "terminal": {
+    "env": {
+      "EDITOR": "zed --wait"
+    },
+    "copy_on_select": true
+  },
+  "inlay_hints": {
+    // "enabled": true
+  },
+  "preview_tabs": {
+    "enable_preview_from_file_finder": true,
+    "enable_preview_from_code_navigation": true
+  }
 }
