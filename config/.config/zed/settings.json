@@ -33,5 +33,21 @@
   "preview_tabs": {
     "enable_preview_from_file_finder": true,
     "enable_preview_from_code_navigation": true
+  },
+  "experimental.theme_overrides": {
+    "border": "#1C1C17",
+    "border.variant": "#1C1C17",
+    "panel.background": "#1C1C17",
+    "editor.background": "#1C1C17",
+    "tab_bar.background": "#1C1C17",
+    "tab.inactive_background": "#1C1C17",
+    "tab.active_background": "#1C1C17",
+    "toolbar.background": "#1C1C17",
+    "status_bar.background": "#1C1C17",
+    "title_bar.background": "#1C1C17",
+    "title_bar.inactive_background": "#1C1C17",
+    "editor.gutter.background": "#1C1C17",
+    "editor.subheader.background": "#1C1C17",
+    "terminal.background": "#1C1C17"
   }
 }
