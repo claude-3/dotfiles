@@ -20,6 +20,9 @@
 !/others/
 !/others/**
 
+!/vscode/
+!/vscode/**
+
 !/config/
 !/config/.config/
 !/config/.config/nvim/

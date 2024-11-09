@@ -1,0 +1,186 @@
+{
+  "[python]": {
+    "editor.formatOnType": true
+  },
+  "animations.Install-Method": "Apc Customize UI++",
+  "apc.electron": {
+    // "opacity": 0.9
+  },
+  "apc.imports": [
+    "file://${userHome}/.vscode/extensions/brandonkirbyson.vscode-animations-2.0.3/dist/updateHandler.js"
+  ],
+  "breadcrumbs.enabled": false,
+  // "css.styleSheets": [
+  //   "**/*.css"
+  // ],
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.fontSize": 16,
+  "editor.formatOnSave": true,
+  "editor.inlineSuggest.enabled": true,
+  "editor.lineHeight": 1.8,
+  "editor.lineNumbers": "relative",
+  "editor.linkedEditing": true,
+  "editor.minimap.enabled": false,
+  "editor.suggestSelection": "first",
+  "editor.tabSize": 2,
+  "editor.wordWrap": "on",
+  "emmet.showSuggestionsAsSnippets": true,
+  "emmet.triggerExpansionOnTab": true,
+  "emmet.variables": {
+    "lang": "ja"
+  },
+  "explorer.compactFolders": false,
+  "explorer.confirmDelete": false,
+  "explorer.confirmDragAndDrop": false,
+  "files.associations": {
+    "*.css": "css",
+    "*.scss": "postcss"
+  },
+  "git.enableSmartCommit": true,
+  "hediet.vscode-drawio.resizeImages": null,
+  "html.autoClosingTags": false,
+  "html.format.wrapLineLength": 0,
+  "liveServer.settings.CustomBrowser": null,
+  "liveServer.settings.donotVerifyTags": true,
+  "material-icon-theme.hidesExplorerArrows": true,
+  "rapidapi.terminalLink.enabled": false,
+  "security.workspace.trust.untrustedFiles": "open",
+  "terminal.external.osxExec": "WezTerm.app",
+  "terminal.integrated.fontFamily": "Hack Nerd Font Mono",
+  "terminal.integrated.fontSize": 14,
+  "typescript.updateImportsOnFileMove.enabled": "never",
+  "vim.easymotion": true,
+  "vim.hlsearch": true,
+  "vim.incsearch": true,
+  "vim.insertModeKeyBindings": [
+    {
+      "after": ["<Esc>"],
+      "before": ["j", "j"]
+    },
+    {
+      "after": ["<Right>"],
+      "before": ["<C-l>"]
+    }
+  ],
+  "vim.leader": "<space>",
+  "vim.normalModeKeyBindingsNonRecursive": [
+    {
+      "before": ["<C-n>"],
+      "commands": [":nohl"]
+    },
+    {
+      "before": ["K"],
+      "commands": ["lineBreakInsert"],
+      "silent": true
+    },
+    {
+      "before": ["<C-h>"],
+      "commands": ["workbench.action.previousEditor"]
+    },
+    {
+      "before": ["<C-l>"],
+      "commands": ["workbench.action.nextEditor"]
+    },
+    // {
+    //   "before": [
+    //     "<leader>",
+    //     "e"
+    //   ],
+    //   "commands": [
+    //     "workbench.action.toggleSidebarVisibility"
+    //   ]
+    // },
+    // {
+    //   "before": [
+    //     "<leader>",
+    //     "f"
+    //   ],
+    //   "commands": [
+    //     "find-it-faster.findFiles"
+    //   ]
+    // },
+    // {
+    //   "before": [
+    //     "<leader>",
+    //     "s"
+    //   ],
+    //   "commands": [
+    //     "find-it-faster.findWithinFiles"
+    //   ]
+    // },
+    {
+      "before": ["<space>"],
+      "commands": ["vspacecode.space"]
+    },
+    {
+      "before": [","],
+      "commands": [
+        "vspacecode.space",
+        {
+          "args": "m",
+          "command": "whichkey.triggerKey"
+        }
+      ]
+    }
+  ],
+  "vim.useCtrlKeys": true,
+  "vim.useSystemClipboard": true,
+  "vim.visualModeKeyBindingsNonRecursive": [
+    {
+      "before": ["<space>"],
+      "commands": ["vspacecode.space"]
+    },
+    {
+      "before": [","],
+      "commands": [
+        "vspacecode.space",
+        {
+          "args": "m",
+          "command": "whichkey.triggerKey"
+        }
+      ]
+    },
+    {
+      "before": [">"],
+      "commands": ["editor.action.indentLines"]
+    },
+    {
+      "before": ["<"],
+      "commands": ["editor.action.outdentLines"]
+    }
+  ],
+  "vspacecode.bindingOverrides": [
+    {
+      "command": "find-it-faster.findFiles",
+      "keys": "f.f",
+      "name": "Find file",
+      "type": "command"
+    },
+    {
+      "command": "find-it-faster.findWithinFiles",
+      "keys": "f.s",
+      "name": "Keyword search in project",
+      "type": "command"
+    },
+    {
+      "command": "workbench.action.toggleSidebarVisibility",
+      "keys": "t.e",
+      "name": "Toggle Explorer",
+      "type": "command"
+    },
+    {
+      "command": "workbench.action.togglePanel",
+      "keys": "t.t",
+      "name": "Toggle Terminal (panel)",
+      "type": "command"
+    }
+  ],
+  "workbench.colorTheme": "Rosé Pine Moon",
+  "workbench.iconTheme": "material-icon-theme",
+  // "vscode-neovim.neovimExecutablePaths.darwin": "/opt/homebrew/bin/nvim",
+  // "workbench.colorTheme": "One Dark Pro Darker",
+  // "window.zoomLevel": 1.1,
+  "workbench.productIconTheme": "fluent-icons",
+  "workbench.startupEditor": "none",
+  "redhat.telemetry.enabled": true
+}
