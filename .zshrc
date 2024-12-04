@@ -189,3 +189,6 @@ eval $(thefuck --alias)
 
 # zoxide
 eval "$(zoxide init zsh)"
+
+# Added by LM Studio CLI (lms)
+export PATH="$PATH:/Users/taikiwatanabe/.cache/lm-studio/bin"
