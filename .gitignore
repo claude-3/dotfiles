@@ -46,6 +46,8 @@
 !/config/.config/zed/keymap.json
 !/config/.config/zellij/
 !/config/.config/zellij/config.kdl
+!/config/.config/ghostty/
+!/config/.config/ghostty/config
 
 # Ignore all .DS_Store files
 *.DS_Store

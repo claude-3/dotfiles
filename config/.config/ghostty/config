@@ -1,0 +1,38 @@
+
+# =========== Theme - Start ==================
+theme = rose-pine-moon
+# https://github.com/rose-pine/ghostty
+
+# background = 001D37
+# background = 162729
+background = 111F20
+
+# green
+palette = 2=#3e8fb0
+palette = 10=#3e8fb0
+# blue
+palette = 4=#9ccfd8
+palette = 12=#9ccfd8
+
+selection-background = 403d52
+# =========== Theme - End ==================
+
+font-size = 18
+
+## タイトルバーを非表示にする (Mac)
+macos-titlebar-style = hidden
+
+# ウィンドウの余白
+window-padding-x = 8
+
+# 背景の透明度
+background-opacity = 0.7
+# 背景のぼかし
+background-blur-radius = 8
+
+# ======== Quick Terminal ========
+quick-terminal-position = top
+keybind = global:opt+shift+cmd+7=toggle_quick_terminal
+
+# ======= Keybind ========
+keybind = ctrl+t>r=reload_config
