@@ -11,8 +11,8 @@ brew "git-delta"
 brew "httpie"
 brew "jq"
 brew "libevent"
+brew "neofetch"
 brew "neovim"
-brew "openssl@1.1"
 brew "postgresql@15"
 brew "ripgrep"
 brew "safe-rm"
@@ -28,27 +28,34 @@ brew "jesseduffield/lazygit/lazygit"
 brew "koekeishiya/formulae/skhd"
 brew "koekeishiya/formulae/yabai"
 cask "affine"
-cask "alacritty", args: { appdir: "/Applications" }
+cask "android-studio"
 cask "appcleaner", args: { appdir: "/Applications" }
 cask "arc", args: { appdir: "/Applications" }
 cask "aural"
+cask "beeper"
 cask "bettertouchtool"
 cask "brave-browser"
+cask "chatgpt"
 cask "chromedriver", args: { appdir: "/Applications" }
 cask "cursor", args: { appdir: "/Applications" }
 cask "docker"
+cask "figma"
 cask "firefox", args: { appdir: "/Applications" }
 cask "font-hack-nerd-font", args: { appdir: "/Applications" }
 cask "font-noto-sans-jp", args: { appdir: "/Applications" }
+cask "ghostty"
 cask "google-chrome", args: { appdir: "/Applications" }
+cask "keycastr"
 cask "logseq"
+cask "maccy"
 cask "min"
 cask "miniforge", args: { appdir: "/Applications" }
 cask "obsidian", args: { appdir: "/Applications" }
+cask "only-switch"
+cask "openemu"
 cask "postman", args: { appdir: "/Applications" }
 cask "proxyman", args: { appdir: "/Applications" }
 cask "raycast"
-cask "stats", args: { appdir: "/Applications" }
 cask "the-unarchiver", args: { appdir: "/Applications" }
 cask "visual-studio-code", args: { appdir: "/Applications" }
 cask "vlc", args: { appdir: "/Applications" }
