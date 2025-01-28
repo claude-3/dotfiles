@@ -54,7 +54,13 @@ return {
         h5 = "pine",
         h6 = "foam",
       },
-
+      palette = {
+        -- Override the builtin palette per variant
+        -- moon = {
+        --     base = '#18191a',
+        --     overlay = '#363738',
+        -- },
+      },
       highlight_groups = {
         Normal = {
           bg = "#171917",

@@ -121,6 +121,8 @@ return {
               -- make the language server recognize "vim" global
               diagnostics = {
                 globals = { "vim" },
+                -- 不要な警告を無視
+                disable = { "missing-fields" },
               },
               completion = {
                 callSnippet = "Replace",
