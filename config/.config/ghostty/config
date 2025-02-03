@@ -5,7 +5,11 @@ theme = rose-pine-moon
 
 # background = 001D37
 # background = 162729
-background = 111F20
+# background = 111F20
+# background = 11393D
+# background = 0F3639
+# background = 223D41
+background = 243738
 
 # green
 palette = 2=#3e8fb0
@@ -26,9 +30,9 @@ macos-titlebar-style = hidden
 window-padding-x = 8
 
 # 背景の透明度
-background-opacity = 0.8
+background-opacity = 0.84
 # 背景のぼかし
-background-blur-radius = 8
+background-blur-radius = 72
 
 # ======== Quick Terminal ========
 quick-terminal-position = top
