@@ -39,10 +39,10 @@ return {
         "pyright", -- python
         "intelephense", -- php
         "graphql",
-        "astro",
         "dockerls",
         "jsonls",
         "eslint",
+        -- "astro",
       },
     })
 

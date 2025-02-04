@@ -24,7 +24,8 @@ selection-background = 403d52
 font-size = 18
 
 ## タイトルバーを非表示にする (Mac)
-macos-titlebar-style = hidden
+# macos-titlebar-style = hidden
+
 
 # ウィンドウの余白
 window-padding-x = 8
