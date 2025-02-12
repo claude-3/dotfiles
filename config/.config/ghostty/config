@@ -9,7 +9,8 @@ theme = rose-pine-moon
 # background = 11393D
 # background = 0F3639
 # background = 223D41
-background = 243738
+# background = 243738
+background = 000000
 
 # green
 palette = 2=#3e8fb0
@@ -31,9 +32,11 @@ font-size = 18
 window-padding-x = 8
 
 # 背景の透明度
-background-opacity = 0.84
+# background-opacity = 0.84
+background-opacity = 0.7
 # 背景のぼかし
-background-blur-radius = 72
+# background-blur-radius = 72
+background-blur-radius = 25
 
 # ======== Quick Terminal ========
 quick-terminal-position = top

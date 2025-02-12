@@ -1,160 +1,112 @@
-# ===================================================================
-# ▼▼▼ Zim configuration ▼▼▼
-# ==============================================================
-# Start configuration added by Zim install {{{
-#
-# User configuration sourced by interactive shells
-#
+# ======= Zinitのセット ========
+# Zinit という Zsh プラグイン管理ツールの設定
+ZINIT_HOME="${XDG_DATA_HOME:-${HOME}/.local/share}/zinit/zinit.git"
 
-# -----------------
-# Zsh configuration
-# -----------------
-
-#
-# History
-#
-
-# Remove older command from the history if a duplicate is to be added.
-setopt HIST_IGNORE_ALL_DUPS
-
-#
-# Input/output
-#
-
-# Set editor default keymap to emacs (`-e`) or vi (`-v`)
-bindkey -e
-
-# Prompt for spelling correction of commands.
-#setopt CORRECT
-
-# Customize spelling correction prompt.
-#SPROMPT='zsh: correct %F{red}%R%f to %F{green}%r%f [nyae]? '
-
-# Remove path separator from WORDCHARS.
-WORDCHARS=${WORDCHARS//[\/]}
-
-# -----------------
-# Zim configuration
-# -----------------
-
-# Use degit instead of git as the default tool to install and update modules.
-#zstyle ':zim:zmodule' use 'degit'
-
-ZIM_HOME=~/.zim
-
-# --------------------
-# Module configuration
-# --------------------
-
-#
-# git
-#
-
-# Set a custom prefix for the generated aliases. The default prefix is 'G'.
-#zstyle ':zim:git' aliases-prefix 'g'
-
-#
-# input
-#
-
-# Append `../` to your input for each `.` you type after an initial `..`
-#zstyle ':zim:input' double-dot-expand yes
-
-#
-# termtitle
-#
-
-# Set a custom terminal title format using prompt expansion escape sequences.
-# See http://zsh.sourceforge.net/Doc/Release/Prompt-Expansion.html#Simple-Prompt-Escapes
-# If none is provided, the default '%n@%m: %~' is used.
-#zstyle ':zim:termtitle' format '%1~'
-
-#
-# zsh-autosuggestions
-#
-
-# Disable automatic widget re-binding on each precmd. This can be set when
-# zsh-users/zsh-autosuggestions is the last module in your ~/.zimrc.
-ZSH_AUTOSUGGEST_MANUAL_REBIND=1
-
-# Customize the style that the suggestions are shown with.
-# See https://github.com/zsh-users/zsh-autosuggestions/blob/master/README.md#suggestion-highlight-style
-#ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=242'
-
-#
-# zsh-syntax-highlighting
-#
-
-# Set what highlighters will be used.
-# See https://github.com/zsh-users/zsh-syntax-highlighting/blob/master/docs/highlighters.md
-ZSH_HIGHLIGHT_HIGHLIGHTERS=(main brackets)
-
-# Customize the main highlighter styles.
-# See https://github.com/zsh-users/zsh-syntax-highlighting/blob/master/docs/highlighters/main.md#how-to-tweak-it
-#typeset -A ZSH_HIGHLIGHT_STYLES
-#ZSH_HIGHLIGHT_STYLES[comment]='fg=242'
-
-# ------------------
-# Initialize modules
-# ------------------
-
-ZIM_HOME=${ZDOTDIR:-${HOME}}/.zim
-# Download zimfw plugin manager if missing.
-if [[ ! -e ${ZIM_HOME}/zimfw.zsh ]]; then
-  if (( ${+commands[curl]} )); then
-    curl -fsSL --create-dirs -o ${ZIM_HOME}/zimfw.zsh \
-        https://github.com/zimfw/zimfw/releases/latest/download/zimfw.zsh
-  else
-    mkdir -p ${ZIM_HOME} && wget -nv -O ${ZIM_HOME}/zimfw.zsh \
-        https://github.com/zimfw/zimfw/releases/latest/download/zimfw.zsh
-  fi
+# Zinit ディレクトリが存在するか確認し、存在しない場合はリポジトリをクローン
+if [ ! -d $ZINIT_HOME ]; then
+    mkdir -p "$(dirname $ZINIT_HOME)"  # 親ディレクトリが存在しない場合は作成
+    git clone https://github.com/zdharma-continuum/zinit.git "$ZINIT_HOME"
 fi
-# Install missing modules, and update ${ZIM_HOME}/init.zsh if missing or outdated.
-if [[ ! ${ZIM_HOME}/init.zsh -nt ${ZDOTDIR:-${HOME}}/.zimrc ]]; then
-  source ${ZIM_HOME}/zimfw.zsh init -q
-fi
-# Initialize modules.
-source ${ZIM_HOME}/init.zsh
 
-# ------------------------------
-# Post-init module configuration
-# ------------------------------
-
-#
-# zsh-history-substring-search
-#
-
-zmodload -F zsh/terminfo +p:terminfo
-# Bind ^[[A/^[[B manually so up/down works both before and after zle-line-init
-for key ('^[[A' '^P' ${terminfo[kcuu1]}) bindkey ${key} history-substring-search-up
-for key ('^[[B' '^N' ${terminfo[kcud1]}) bindkey ${key} history-substring-search-down
-for key ('k') bindkey -M vicmd ${key} history-substring-search-up
-for key ('j') bindkey -M vicmd ${key} history-substring-search-down
-unset key
-# }}} End configuration added by Zim install
-
-# ==============================================================
-# ▲▲▲ Zim configuration ▲▲▲
-# ===================================================================
-
-# iterm2
-# See https://www.iterm2.com/3.3/documentation-scripting-fundamentals.html
-function iterm2_print_user_vars() {
-  iterm2_set_user_var nodeVersion $(node -v)
-}
+# Zinit を読み込み
+source "${ZINIT_HOME}/zinit.zsh"
 
 
-# Homebrew
-# export PATH="/opt/homebrew/bin:$PATH"
+# ======= PATHの追加 ========
+# Homebrew (brewでインストールしたものはまとめてここからPATHに登録される)
 eval "$(/opt/homebrew/bin/brew shellenv)"
+# PostgreSQLのバージョン指定？
+export PATH="/opt/homebrew/opt/postgresql@15/bin:$PATH"
 
-# Starship prompt
-eval "$(starship init zsh)"
+# Mise
+eval "$(mise activate zsh)"
 
-# Volta
-export VOLTA_HOME="$HOME/.volta"
-export PATH="$VOLTA_HOME/bin:$PATH"
 
+# ======== Zsh プラグイン ========
+# Zsh シンタックスハイライトプラグインをインストールして読み込み
+zinit light zsh-users/zsh-syntax-highlighting
+
+# Zsh コンプリーションプラグインをインストールして読み込み
+zinit light zsh-users/zsh-completions
+
+# Zsh オートサジェスチョンプラグインをインストールして読み込み
+zinit light zsh-users/zsh-autosuggestions
+
+# Fzf-tab プラグインをインストールして読み込み（タブ補完の強化）
+zinit light Aloxaf/fzf-tab
+
+
+# ======== Zsh プラグイン（続き） ========
+# 様々なプラグインを Zinit スニペットで読み込み
+zinit snippet OMZP::git
+zinit snippet OMZP::sudo
+zinit snippet OMZP::command-not-found
+
+if [[ "$OSTYPE" == linux* ]]; then
+  zinit snippet OMZP::archlinux
+fi
+
+
+# ======== コンプリーションの設定 ========
+# Zsh コンプリーションを初期化
+autoload -U compinit && compinit
+
+# ======== キー割り当て ========
+# Ctrl+f でオートサジェスチョンを確定
+bindkey '^f' autosuggest-accept
+
+# Ctrl+p で履歴を逆検索
+bindkey '^p' history-search-backward
+
+# ======== 履歴の設定 ========
+# 履歴の最大数を 5000 に設定
+HISTSIZE=5000
+
+# 履歴ファイルの場所を指定
+HISTFILE=~/.zsh_history
+
+# 保存する履歴の数を設定
+SAVEHIST=$HISTSIZE
+
+# 重複した履歴を削除
+HISTDUP=erase
+
+# 履歴を共有し、スペースで区切られたコマンドを1つのエントリとして扱う
+setopt appendhistory
+setopt sharehistory
+setopt hist_ignore_space
+setopt hist_save_no_dups
+setopt hist_find_no_dups
+
+# ======== コンプリーションのスタイル設定 ========
+# コンプリーションのスタイルを設定（色やメニュー表示など）
+zstyle ':completion:*' matcher-list 'm:{a-z}={A-Za-z}'
+zstyle ':completion:*' list-colors "${(s.:.)LS_COLORS}"
+zstyle ':completion:*' menu no
+zstyle 'fzf-tab:complete:cd:*' fzf-preview 'ls --color $realpath'
+zstyle 'fzf-tab:complete:__zoxide_z:*' fzf-preview 'ls --color $realpath'
+
+# ======== エイリアス ========
+# ls コマンドに色付け
+# alias ls='ls --color'
+alias ls='eza -al'
+
+# clear コマンドのエイリアス
+alias c='clear'
+
+
+# ======== Shell intergrations ========
+# Fzf のシェル統合を読み込み
+eval "$(fzf --zsh)"
+
+# Zoxide のシェル統合を読み込み（cd の履歴管理）
+eval "$(zoxide init --cmd cd zsh)"
+
+# thefuck
+eval $(thefuck --alias)
+
+# eslint_d
+export ESLINT_USE_FLAT_CONFIG=true
 
 
 # >>> conda initialize >>>
@@ -172,23 +124,7 @@ fi
 unset __conda_setup
 # <<< conda initialize <<<
 
-export PATH="/opt/homebrew/opt/postgresql@15/bin:$PATH"
 
-# bun completions
-[ -s "/Users/iatik/.bun/_bun" ] && source "/Users/iatik/.bun/_bun"
 
-# bun
-export BUN_INSTALL="$HOME/.bun"
-export PATH="$BUN_INSTALL/bin:$PATH"
-
-# eslint_d
-export ESLINT_USE_FLAT_CONFIG=true
-
-# thefuck
-eval $(thefuck --alias)
-
-# zoxide
-eval "$(zoxide init zsh)"
-
-# Added by LM Studio CLI (lms)
-export PATH="$PATH:/Users/taikiwatanabe/.cache/lm-studio/bin"
+# Starship prompt (ファイルの最後に記述)
+eval "$(starship init zsh)"
