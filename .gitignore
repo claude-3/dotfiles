@@ -27,6 +27,8 @@
 !/config/.config/
 !/config/.config/nvim/
 !/config/.config/nvim/**
+!/config/.config/yazi/
+!/config/.config/yazi/**
 
 !/config/.config/starship.toml
 

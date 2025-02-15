@@ -33,7 +33,7 @@ window-padding-x = 8
 
 # 背景の透明度
 # background-opacity = 0.84
-background-opacity = 0.7
+background-opacity = 0.8
 # 背景のぼかし
 # background-blur-radius = 72
 background-blur-radius = 25
