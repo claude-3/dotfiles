@@ -95,12 +95,14 @@ zstyle 'fzf-tab:complete:__zoxide_z:*' fzf-preview 'ls --color $realpath'
 alias ls='eza --icons --group-directories-first'
 alias la='eza -a --icons --group-directories-first'
 alias ll='eza -al --icons --group-directories-first'
+alias l='eza -al --icons --group-directories-first'
 # nvim
 alias v='nvim'
 # zshrcを編集する
-alias vzr='nvim ~/.zshrc'
+alias vz='nvim ~/.zshrc'
 # fzf
 alias vf='nvim $(fzf)'
+alias vfp='fzf --preview "bat --style=numbers --color=always {}" | xargs -n 1 nvim'
 
 # clear コマンドのエイリアス
 alias c='clear'
