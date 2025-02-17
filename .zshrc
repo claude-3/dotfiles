@@ -103,11 +103,18 @@ alias vz='nvim ~/.zshrc'
 # fzf
 alias vf='nvim $(fzf)'
 alias vfp='fzf --preview "bat --style=numbers --color=always {}" | xargs -n 1 nvim'
+# diff
+df() {
+  nvim -d "$(fzf --prompt="File-1: ")" "$(fzf --prompt="File-2: ")"
+}
 
 # clear コマンドのエイリアス
 alias c='clear'
 
-# ghq管理下のリポジトリに移動
+# ======== ghq管理下のリポジトリに移動 ========
+# 環境変数で管理ディレクトリを設定
+export GHQ_ROOT=~/dev
+# リポジトリ移動用のコマンドを用意
 cdr() {
   local repodir=$(ghq list | fzf -1 +m) && cd $(ghq root)/$repodir
 }
