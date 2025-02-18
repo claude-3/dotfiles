@@ -41,7 +41,8 @@ return {
         "graphql",
         "dockerls",
         "jsonls",
-        "eslint",
+        "biome", -- js/ts linter & formatter
+        -- "eslint",
         -- "astro",
       },
     })
@@ -49,12 +50,12 @@ return {
     mason_tool_installer.setup({
       ensure_installed = {
         "prettier", -- prettier formatter
+        -- "eslint_d", -- js/ts linter
         "stylua", -- lua formatter
         "isort", -- python formatter
         "black", -- python formatter
         "php-cs-fixer", -- php formatter
         "pylint", -- python linter
-        "eslint_d", -- js/ts linter
         "phpstan", -- php linter
       },
     })
