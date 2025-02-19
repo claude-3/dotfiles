@@ -4,7 +4,6 @@ return {
   dependencies = {
     "hrsh7th/cmp-buffer", -- 現在のバッファ内のテキストをオートコンプリートの候補にする
     "hrsh7th/cmp-path", -- ファイルシステムのパスをオートコンプリートの候補にする
-    -- TODO: もしあれば、css、prettierrc、eslintrcの入力補助をもっと強力にしたい
     {
       "L3MON4D3/LuaSnip", -- スニペットエンジン
       -- follow latest release
