@@ -56,10 +56,12 @@ return {
       },
       palette = {
         -- Override the builtin palette per variant
-        -- moon = {
-        --     base = '#18191a',
-        --     overlay = '#363738',
-        -- },
+        moon = {
+          -- base = '#18191a',
+          -- overlay = '#363738',
+          -- pine = "#4BC3F4",
+          pine = "#4AB8E5",
+        },
       },
       highlight_groups = {
         Normal = {

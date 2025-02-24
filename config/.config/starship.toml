@@ -17,5 +17,5 @@ error_symbol = "[](bold blue)"
 
 # conda環境の表示
 [conda]
-format = "[$symbol$environment](dimmed green) "
+format = "[$symbol$environment](dimmed white)"
 ignore_base = false  # base環境も表示させたい

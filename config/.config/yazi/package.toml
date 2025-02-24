@@ -10,3 +10,8 @@ hash = "c40e434318a8ceffd01842f8dfb2390e"
 use = "dangooddd/kanagawa"
 rev = "d98f0c3"
 hash = "cada780385f75abbcfbf5343256b441"
+
+[[flavor.deps]]
+use = "kmlupreti/ayu-dark"
+rev = "5412a78"
+hash = "60690920e8c0f9f81ff02009de5d156f"
