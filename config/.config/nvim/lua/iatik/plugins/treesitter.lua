@@ -26,6 +26,7 @@ return {
         "tsx",
         "yaml",
         "toml",
+        "kdl",
         "html",
         "css",
         "scss",

@@ -107,6 +107,8 @@ alias vfp='fzf --preview "bat --style=numbers --color=always {}" | xargs -n 1 nv
 df() {
   nvim -d "$(fzf --prompt="File-1: ")" "$(fzf --prompt="File-2: ")"
 }
+# zellij
+alias zj='zellij'
 
 # clear コマンドのエイリアス
 alias c='clear'
