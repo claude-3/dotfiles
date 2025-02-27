@@ -24,7 +24,7 @@ yabai -m config mouse_follows_focus on
 
 # modifier に altキー を設定する（cmd,shift,fnなどでもよい）
 # modifier for clicking and dragging with mouse
-yabai -m config mouse_modifier alt
+yabai -m config mouse_modifier ctrl
 
 # modifier+左クリックでドラッグするとウィンドウを移動できる
 # set modifier + left-click drag to move window

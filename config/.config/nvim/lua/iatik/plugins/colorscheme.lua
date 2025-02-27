@@ -61,6 +61,8 @@ return {
           -- overlay = '#363738',
           -- pine = "#4BC3F4",
           pine = "#4AB8E5",
+          -- gold = "#FFB35C",
+          gold = "#FFB35C",
         },
       },
       highlight_groups = {

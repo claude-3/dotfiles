@@ -7,23 +7,60 @@ theme = rose-pine-moon
 # https://github.com/rose-pine/ghostty
 # theme = ayu
 
-# background = 243738
-background = 000000
+# --- Color Palette ---
+# Muted
+# palette = 0=#6e6a86
 
-# green
+# Overlay
+# palette = 8=#393552
+
+# Love
+# palette = 1=#eb6f92
+# palette = 9=#eb6f92
+
+# Pine (Custom)
+# palette = 2=#3e8fb0
+# palette = 10=#3e8fb0
 palette = 2=#4AB8E5
 palette = 10=#4AB8E5
-# blue
-# palette = 4=#4BC3F4
-# palette = 12=#4BC3F4
 
-# selection-background = 403d52
+# Gold (Custom)
+# palette = 3=#f6c177
+# palette = 11=#f6c177
+palette = 3=#FFB35C
+palette = 11=#FFB35C
+
+# Foam
+palette = 4=#9ccfd8
+palette = 12=#9ccfd8
+
+# Iris
+# palette = 5=#c4a7e7
+# palette = 13=#c4a7e7
+
+# Rose
+# palette = 6=#ea9a97
+# palette = 14=#ea9a97
+
+# Text
+# palette = 7=#e0def4
+# palette = 15=#e0def4
+
+background = #000000
+
+# foreground = #c6d0f5
+# cursor-color = #f2d5cf
+# cursor-text = #c6d0f5
+# selection-background = #626880
+# selection-foreground = #c6d0f5
 # =========== Theme - End ==================
 
 font-size = 18
 
-## タイトルバーを非表示にする (Mac)
-# macos-titlebar-style = hidden
+window-theme = dark
+
+## タイトルバーを非表示にする (Mac) native / transparent / tabs / hidden
+macos-titlebar-style = tabs
 
 
 # ウィンドウの余白

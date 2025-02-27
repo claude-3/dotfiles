@@ -6,13 +6,21 @@ return {
     local lazy_status = require("lazy.status")
 
     local colors = {
-      blue = "#65d1ff",
-      green = "#3effdc",
-      violet = "#ff61ef",
-      yellow = "#ffda7b",
-      red = "#ff4a4a",
-      fg = "#c3ccdc",
-      bg = "#112638",
+      -- blue = "#65d1ff",
+      -- green = "#3effdc",
+      -- violet = "#ff61ef",
+      -- yellow = "#ffda7b",
+      -- red = "#ff4a4a",
+      -- fg = "#c3ccdc",
+      -- bg = "#112638",
+      -- inactive_bg = "#2c3043",
+      blue = "#9ccfd8",
+      green = "#EA9A97",
+      violet = "#C4A7E7",
+      yellow = "#FFB35C",
+      red = "#EB6F92",
+      fg = "#e0def4",
+      bg = "#232136",
       inactive_bg = "#2c3043",
     }
 
@@ -54,12 +62,13 @@ return {
       options = {
         theme = my_lualine_theme,
       },
-      sections =  {
+      sections = {
         lualine_x = {
           {
+            -- Notification of Neovim plugin updates
             lazy_status.updates,
             cond = lazy_status.has_updates,
-            color = { fg = "#ff9e64" },
+            color = { fg = "#FFB35C" },
           },
           { "encoding" },
           { "fileformat" },
