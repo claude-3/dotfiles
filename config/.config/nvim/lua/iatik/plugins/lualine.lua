@@ -6,19 +6,14 @@ return {
     local lazy_status = require("lazy.status")
 
     local colors = {
-      -- blue = "#65d1ff",
-      -- green = "#3effdc",
-      -- violet = "#ff61ef",
-      -- yellow = "#ffda7b",
-      -- red = "#ff4a4a",
-      -- fg = "#c3ccdc",
-      -- bg = "#112638",
-      -- inactive_bg = "#2c3043",
-      blue = "#9ccfd8",
-      green = "#EA9A97",
-      violet = "#C4A7E7",
-      yellow = "#FFB35C",
-      red = "#EB6F92",
+      foam = "#9ccfd8",
+      pine = "#4AB8E5",
+      iris = "#c4a7e7",
+      gold = "#FFB35C",
+      love = "#eb6f92",
+      rose = "#ea9a97",
+      text = "#e0def4",
+
       fg = "#e0def4",
       bg = "#232136",
       inactive_bg = "#2c3043",
@@ -26,27 +21,27 @@ return {
 
     local my_lualine_theme = {
       normal = {
-        a = { bg = colors.blue, fg = colors.bg, gui = "bold" },
+        a = { bg = colors.foam, fg = colors.bg, gui = "bold" },
         b = { bg = colors.bg, fg = colors.fg },
         c = { bg = colors.bg, fg = colors.fg },
       },
       insert = {
-        a = { bg = colors.green, fg = colors.bg, gui = "bold" },
+        a = { bg = colors.rose, fg = colors.bg, gui = "bold" },
         b = { bg = colors.bg, fg = colors.fg },
         c = { bg = colors.bg, fg = colors.fg },
       },
       visual = {
-        a = { bg = colors.violet, fg = colors.bg, gui = "bold" },
+        a = { bg = colors.iris, fg = colors.bg, gui = "bold" },
         b = { bg = colors.bg, fg = colors.fg },
         c = { bg = colors.bg, fg = colors.fg },
       },
       command = {
-        a = { bg = colors.yellow, fg = colors.bg, gui = "bold" },
+        a = { bg = colors.pine, fg = colors.bg, gui = "bold" },
         b = { bg = colors.bg, fg = colors.fg },
         c = { bg = colors.bg, fg = colors.fg },
       },
       replace = {
-        a = { bg = colors.red, fg = colors.bg, gui = "bold" },
+        a = { bg = colors.gold, fg = colors.bg, gui = "bold" },
         b = { bg = colors.bg, fg = colors.fg },
         c = { bg = colors.bg, fg = colors.fg },
       },
