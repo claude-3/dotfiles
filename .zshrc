@@ -148,6 +148,10 @@ function y() {
 # デフォルトエディタの設定
 export EDITOR=nvim
 
+# AI関連のAPI Key
+if [ -f "$HOME/.api_keys.sh" ]; then
+  source "$HOME/.api_keys.sh"
+fi
 
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
@@ -168,3 +172,11 @@ unset __conda_setup
 # Starship prompt (プロンプトのカスタマイズ)
 # ファイルの最後に記述する
 eval "$(starship init zsh)"
+
+# pnpm
+# export PNPM_HOME="/Users/taikiwatanabe/Library/pnpm"
+# case ":$PATH:" in
+#   *":$PNPM_HOME:"*) ;;
+#   *) export PATH="$PNPM_HOME:$PATH" ;;
+# esac
+# pnpm end
