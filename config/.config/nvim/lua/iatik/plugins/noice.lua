@@ -9,11 +9,13 @@ return {
     --   If not available, we use `mini` as the fallback
     "rcarriga/nvim-notify",
   },
-  -- config = function()
-  --   local notify = require("notify")
-  --
-  --   notify.setup({
-  --     background_colour = "#000000"
-  --   })
-  -- end,
+  opts = {
+    cmdline = {
+      enabled = true,
+      view = "cmdline_popup",
+      format = {
+        cmdline = { pattern = "^:", icon = "", lang = "vim" },
+      },
+    },
+  },
 }
