@@ -55,7 +55,7 @@ background = #000000
 # selection-foreground = #c6d0f5
 # =========== Theme - End ==================
 
-font-size = 18
+# font-size = 18
 
 window-theme = dark
 
@@ -74,8 +74,8 @@ background-opacity = 0.64
 background-blur-radius = 48
 
 # ======== Quick Terminal ========
-quick-terminal-position = top
-keybind = global:opt+shift+cmd+7=toggle_quick_terminal
+# quick-terminal-position = top
+# keybind = global:opt+shift+cmd+7=toggle_quick_terminal
 
 # ======= Keybind ========
 keybind = ctrl+g>r=reload_config
