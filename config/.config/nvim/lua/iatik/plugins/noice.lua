@@ -7,13 +7,24 @@ return {
     -- OPTIONAL:
     --   `nvim-notify` is only needed, if you want to use the notification view.
     --   If not available, we use `mini` as the fallback
-    "rcarriga/nvim-notify",
+    --   通知などが邪魔なので使用しないことにした
+    -- "rcarriga/nvim-notify",
   },
-  -- config = function()
-  --   local notify = require("notify")
-  --
-  --   notify.setup({
-  --     background_colour = "#000000"
-  --   })
-  -- end,
+  opts = {
+    cmdline = {
+      enabled = true,
+      view = "cmdline_popup",
+      format = {
+        cmdline = { pattern = "^:", icon = "", lang = "vim" },
+      },
+    },
+    message = {
+      enabled = false,
+      view = "mini",
+      view_warn = "mini",
+    },
+    popupmenu = {
+      enabled = false,
+    },
+  },
 }
