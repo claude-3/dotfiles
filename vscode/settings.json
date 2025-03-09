@@ -45,7 +45,7 @@
   "material-icon-theme.hidesExplorerArrows": true,
   "rapidapi.terminalLink.enabled": false,
   "security.workspace.trust.untrustedFiles": "open",
-  "terminal.external.osxExec": "WezTerm.app",
+  "terminal.external.osxExec": "Ghostty.app",
   "terminal.integrated.fontFamily": "Hack Nerd Font Mono",
   "terminal.integrated.fontSize": 14,
   "typescript.updateImportsOnFileMove.enabled": "never",
@@ -173,14 +173,31 @@
       "keys": "t.t",
       "name": "Toggle Terminal (panel)",
       "type": "command"
+    },
+    {
+      "command": "workbench.action.toggleMaximizedPanel",
+      "keys": "t.m",
+      "name": "Toggle Terminal panel fullsize",
+      "type": "command"
     }
   ],
-  "workbench.colorTheme": "Rosé Pine Moon",
+  "workbench.colorTheme": "iatik-theme-vscode",
   "workbench.iconTheme": "material-icon-theme",
   // "vscode-neovim.neovimExecutablePaths.darwin": "/opt/homebrew/bin/nvim",
   // "workbench.colorTheme": "One Dark Pro Darker",
   // "window.zoomLevel": 1.1,
   "workbench.productIconTheme": "fluent-icons",
   "workbench.startupEditor": "none",
-  "redhat.telemetry.enabled": true
+  "redhat.telemetry.enabled": true,
+  "geminicodeassist.project": "",
+  "diffEditor.codeLens": true,
+  "roo-cline.allowedCommands": [
+    "npm test",
+    "npm install",
+    "tsc",
+    "git log",
+    "git diff",
+    "git show"
+  ],
+  "editor.detectIndentation": false
 }
