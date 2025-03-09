@@ -29,6 +29,8 @@
 !/config/.config/nvim/**
 !/config/.config/yazi/
 !/config/.config/yazi/**
+!/config/.config/karabiner/
+!/config/.config/karabiner/**
 
 !/config/.config/starship.toml
 
