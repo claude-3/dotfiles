@@ -2,3 +2,4 @@
 bun = "1.2.2"
 node = "latest"
 pnpm = "latest"
+poetry = "2.1.1"
