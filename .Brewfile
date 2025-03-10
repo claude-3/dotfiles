@@ -34,9 +34,10 @@ brew "tnftp"
 brew "tree"
 brew "unzip"
 brew "yazi"
-brew "zellij"
 brew "zoxide"
 brew "jesseduffield/lazygit/lazygit"
+brew "koekeishiya/formulae/skhd"
+brew "koekeishiya/formulae/yabai"
 cask "appcleaner", args: { appdir: "/Applications" }
 cask "arc", args: { appdir: "/Applications" }
 cask "aural"
@@ -58,7 +59,6 @@ cask "keycastr"
 cask "logseq"
 cask "maccy"
 cask "min"
-cask "miniforge", args: { appdir: "/Applications" }
 cask "obsidian", args: { appdir: "/Applications" }
 cask "openemu"
 cask "postman", args: { appdir: "/Applications" }

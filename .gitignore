@@ -14,45 +14,42 @@
 !/README.md
 !/LICENSE
 
-!/_setup/
-!/_setup/**
+!/unused_setup_files/
+!/unused_setup_files/**
 
-!/others/
-!/others/**
+!/unused_configs/
+!/unused_configs/**
 
-!/vscode/
-!/vscode/**
+!/at_home_files/
+!/at_home_files/**
 
-!/config/
-!/config/.config/
-!/config/.config/nvim/
-!/config/.config/nvim/**
-!/config/.config/yazi/
-!/config/.config/yazi/**
-!/config/.config/karabiner/
-!/config/.config/karabiner/**
+!/backup_settings/
+!/backup_settings/**
 
-!/config/.config/starship.toml
+!/at_config_files/
+!/at_config_files/.config/
+!/at_config_files/.config/nvim/
+!/at_config_files/.config/nvim/**
+!/at_config_files/.config/yazi/
+!/at_config_files/.config/yazi/**
+!/at_config_files/.config/karabiner/
+!/at_config_files/.config/karabiner/**
 
-!/config/.config/git/
-!/config/.config/git/ignore
-!/config/.config/ghostty/
-!/config/.config/ghostty/config
-!/config/.config/mise/
-!/config/.config/mise/config.toml
-!/config/.config/zed/
-!/config/.config/zed/settings.json
-!/config/.config/zed/keymap.json
-!/config/.config/zellij/
-!/config/.config/zellij/config.kdl
-!/config/.config/alacritty/
-!/config/.config/alacritty/alacritty.toml
-!/config/.config/yabai/
-!/config/.config/yabai/yabairc
-!/config/.config/skhd/
-!/config/.config/skhd/skhdrc
-!/config/.config/aerospace/
-!/config/.config/aerospace/aerospace.toml
+!/at_config_files/.config/starship.toml
+
+!/at_config_files/.config/git/
+!/at_config_files/.config/git/ignore
+!/at_config_files/.config/ghostty/
+!/at_config_files/.config/ghostty/config
+!/at_config_files/.config/mise/
+!/at_config_files/.config/mise/config.toml
+!/at_config_files/.config/zed/
+!/at_config_files/.config/zed/settings.json
+!/at_config_files/.config/zed/keymap.json
+!/at_config_files/.config/yabai/
+!/at_config_files/.config/yabai/yabairc
+!/at_config_files/.config/skhd/
+!/at_config_files/.config/skhd/skhdrc
 
 # Ignore all .DS_Store files
 *.DS_Store
