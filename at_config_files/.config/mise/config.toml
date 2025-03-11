@@ -1,5 +1,5 @@
 [tools]
 bun = "1.2.2"
-node = "latest"
+node = "lts"
 pnpm = "latest"
 poetry = "2.1.1"
