@@ -161,3 +161,6 @@ fi
 # ファイルの最後に記述する
 eval "$(starship init zsh)"
 
+
+# Added by Windsurf
+export PATH="/Users/iatik/.codeium/windsurf/bin:$PATH"
