@@ -6,24 +6,6 @@
                     {
                         "manipulators": [
                             {
-                                "description": "Hyper: right_control to shift+control+option+command",
-                                "from": {
-                                    "key_code": "right_control",
-                                    "modifiers": { "optional": ["any"] }
-                                },
-                                "to": [
-                                    {
-                                        "key_code": "left_command",
-                                        "modifiers": ["left_shift", "left_control", "left_option"]
-                                    }
-                                ],
-                                "type": "basic"
-                            }
-                        ]
-                    },
-                    {
-                        "manipulators": [
-                            {
                                 "description": "Sub Hyper: caps_lock to control+option+command",
                                 "from": {
                                     "key_code": "caps_lock",
@@ -256,7 +238,7 @@
                     "simple_modifications": [
                         {
                             "from": { "apple_vendor_top_case_key_code": "keyboard_fn" },
-                            "to": [{ "key_code": "right_control" }]
+                            "to": [{ "key_code": "caps_lock" }]
                         }
                     ]
                 }
