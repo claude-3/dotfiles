@@ -39,7 +39,6 @@ brew "jesseduffield/lazygit/lazygit"
 brew "koekeishiya/formulae/skhd"
 brew "koekeishiya/formulae/yabai"
 cask "appcleaner", args: { appdir: "/Applications" }
-cask "arc", args: { appdir: "/Applications" }
 cask "aural"
 cask "balenaetcher"
 cask "bettertouchtool"
@@ -60,7 +59,6 @@ cask "logseq"
 cask "maccy"
 cask "min"
 cask "obsidian", args: { appdir: "/Applications" }
-cask "openemu"
 cask "postman", args: { appdir: "/Applications" }
 cask "proxyman", args: { appdir: "/Applications" }
 cask "raycast"

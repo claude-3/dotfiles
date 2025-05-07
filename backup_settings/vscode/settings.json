@@ -13,8 +13,8 @@
   // "css.styleSheets": [
   //   "**/*.css"
   // ],
-  "editor.defaultFormatter": "esbenp.prettier-vscode",
-  "editor.fontSize": 16,
+  "editor.defaultFormatter": "biomejs.biome",
+  "editor.fontSize": 14,
   "editor.formatOnSave": true,
   "editor.inlineSuggest.enabled": true,
   "editor.lineHeight": 1.8,
@@ -181,7 +181,6 @@
       "type": "command"
     }
   ],
-  "workbench.colorTheme": "iatik-theme-vscode",
   "workbench.iconTheme": "material-icon-theme",
   // "vscode-neovim.neovimExecutablePaths.darwin": "/opt/homebrew/bin/nvim",
   // "workbench.colorTheme": "One Dark Pro Darker",
@@ -199,5 +198,6 @@
     "git diff",
     "git show"
   ],
-  "editor.detectIndentation": false
+  "editor.detectIndentation": false,
+  "workbench.colorTheme": "iatik-theme-vscode"
 }
