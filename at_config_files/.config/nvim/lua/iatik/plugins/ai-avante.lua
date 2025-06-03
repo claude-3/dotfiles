@@ -6,7 +6,7 @@ return {
   opts = {
     -- add any opts here
     provider = "openrouter",
-    vendors = {
+    providers = {
       openrouter = {
         __inherited_from = "openai",
         endpoint = "https://openrouter.ai/api/v1",
