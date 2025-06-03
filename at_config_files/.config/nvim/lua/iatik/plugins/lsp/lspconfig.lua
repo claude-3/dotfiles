@@ -82,55 +82,69 @@ return {
       vim.fn.sign_define(hl, { text = icon, texthl = hl, numhl = "" })
     end
 
-    mason_lspconfig.setup_handlers({
-      -- default handler for installed servers
-      function(server_name)
-        lspconfig[server_name].setup({
-          capabilities = capabilities,
-        })
-      end,
-      ["graphql"] = function()
-        -- configure graphql language server
-        lspconfig["graphql"].setup({
-          capabilities = capabilities,
-          filetypes = { "graphql", "gql", "svelte", "typescriptreact", "javascriptreact" },
-        })
-      end,
-      ["emmet_ls"] = function()
-        -- configure emmet language server
-        lspconfig["emmet_ls"].setup({
-          capabilities = capabilities,
-          filetypes = {
-            "html",
-            "typescriptreact",
-            "javascriptreact",
-            "css",
-            "sass",
-            "scss",
-            "less",
-            "svelte",
-          },
-        })
-      end,
-      ["lua_ls"] = function()
-        -- configure lua server (with special settings)
-        lspconfig["lua_ls"].setup({
-          capabilities = capabilities,
-          settings = {
-            Lua = {
-              -- make the language server recognize "vim" global
-              diagnostics = {
-                globals = { "vim" },
-                -- 不要な警告を無視
-                disable = { "missing-fields" },
-              },
-              completion = {
-                callSnippet = "Replace",
-              },
-            },
-          },
-        })
-      end,
+    -- ***** ここから: mason-lspconfigのv2.0以降のBrakingChangesによる変更 (2025-06-03) *****
+
+    -- mason-lspconfigのセットアップは、基本的にはこれでOK。
+    -- デフォルトのcapabilitiesを渡す
+    -- mason_lspconfig.setup({
+    -- デフォルトのLSP設定をここで定義できる
+    -- 例えば、すべてのLSPサーバーに共通の設定を適用したい場合など
+    -- ensure_installed = { "lua_ls", "jsonls", ... }, -- masonで自動インストールしたいLSPサーバーがあればここに記述
+    -- auto_install = true, -- デフォルトでtrueなので不要だが、明示的に指定することも可能
+    --
+    -- 以下はmason-lspconfigのドキュメントの例からの引用ですが、
+    -- ほとんどの場合、デフォルトで十分です。
+    -- handlers = {
+    --   -- デフォルトのハンドラは自動的に設定されるため、明示的に記述する必要はほぼありません。
+    --   -- function(server_name)
+    --   --   lspconfig[server_name].setup({
+    --   --     capabilities = capabilities,
+    --   --   })
+    --   -- end,
+    -- },
+    -- })
+
+    -- 特定のLSPサーバーにカスタマイズされた設定を適用する
+    -- ここでは、以前の `setup_handlers` 内に記述していた個別の設定をそのまま移行します。
+    -- これらの設定は、mason-lspconfigのデフォルト設定を上書き（または追加）します。
+
+    -- configure graphql language server
+    lspconfig["graphql"].setup({
+      capabilities = capabilities,
+      filetypes = { "graphql", "gql", "svelte", "typescriptreact", "javascriptreact" },
     })
+
+    -- configure emmet language server
+    lspconfig["emmet_ls"].setup({
+      capabilities = capabilities,
+      filetypes = {
+        "html",
+        "typescriptreact",
+        "javascriptreact",
+        "css",
+        "sass",
+        "scss",
+        "less",
+        "svelte",
+      },
+    })
+
+    -- configure lua server (with special settings)
+    lspconfig["lua_ls"].setup({
+      capabilities = capabilities,
+      settings = {
+        Lua = {
+          diagnostics = {
+            globals = { "vim" },
+            disable = { "missing-fields" },
+          },
+          completion = {
+            callSnippet = "Replace",
+          },
+        },
+      },
+    })
+
+    -- ***** ここまで: mason-lspconfigのv2.0以降のBrakingChangesによる変更 (2025-06-03) *****
   end,
 }

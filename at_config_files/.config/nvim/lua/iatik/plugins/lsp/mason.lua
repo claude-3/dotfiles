@@ -1,7 +1,7 @@
 return {
-  "williamboman/mason.nvim",
+  "mason-org/mason.nvim",
   dependencies = {
-    "williamboman/mason-lspconfig.nvim",
+    "mason-org/mason-lspconfig.nvim",
     "WhoIsSethDaniel/mason-tool-installer.nvim",
   },
   config = function()
@@ -45,6 +45,7 @@ return {
         -- "eslint",
         -- "astro",
       },
+      automatic_enable = true,
     })
 
     mason_tool_installer.setup({
