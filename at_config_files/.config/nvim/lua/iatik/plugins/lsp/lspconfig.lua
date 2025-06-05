@@ -92,10 +92,10 @@ return {
     -- ensure_installed = { "lua_ls", "jsonls", ... }, -- masonで自動インストールしたいLSPサーバーがあればここに記述
     -- auto_install = true, -- デフォルトでtrueなので不要だが、明示的に指定することも可能
     --
-    -- 以下はmason-lspconfigのドキュメントの例からの引用ですが、
-    -- ほとんどの場合、デフォルトで十分です。
+    -- 以下はmason-lspconfigのドキュメントの例からの引用
+    -- ほとんどの場合、デフォルトで十分
     -- handlers = {
-    --   -- デフォルトのハンドラは自動的に設定されるため、明示的に記述する必要はほぼありません。
+    --   -- デフォルトのハンドラは自動的に設定されるため、明示的に記述する必要はほぼない
     --   -- function(server_name)
     --   --   lspconfig[server_name].setup({
     --   --     capabilities = capabilities,
@@ -105,8 +105,7 @@ return {
     -- })
 
     -- 特定のLSPサーバーにカスタマイズされた設定を適用する
-    -- ここでは、以前の `setup_handlers` 内に記述していた個別の設定をそのまま移行します。
-    -- これらの設定は、mason-lspconfigのデフォルト設定を上書き（または追加）します。
+    -- これらの設定は、mason-lspconfigのデフォルト設定を上書き（または追加）する
 
     -- configure graphql language server
     lspconfig["graphql"].setup({
