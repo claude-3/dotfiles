@@ -1,5 +1,3 @@
-tap "homebrew/bundle"
-tap "homebrew/services"
 tap "jesseduffield/lazygit"
 tap "koekeishiya/formulae"
 brew "b2sum"
@@ -69,4 +67,4 @@ cask "vlc", args: { appdir: "/Applications" }
 cask "warp", args: { appdir: "/Applications" }
 cask "wezterm"
 cask "zed"
-cask "zen-browser"
+cask "zen"
