@@ -6,9 +6,7 @@ opt.relativenumber = true
 opt.number = true
 
 -- clipboard
--- opt.clipboard:append("unnamedplus")
--- clipboard: cross-platform (Linux, Mac, Windows)
-opt.clipboard:append({ "unnamed", "unnamedplus" })
+opt.clipboard = "unnamedplus"
 
 -- backspase
 opt.backspace = "indent,eol,start"
