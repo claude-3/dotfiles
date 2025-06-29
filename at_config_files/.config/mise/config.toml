@@ -1,5 +1,6 @@
 [tools]
 bun = "1.2.2"
+ghq = "latest"
 node = "lts"
 pnpm = "latest"
 poetry = "2.1.1"
