@@ -95,10 +95,11 @@ zstyle 'fzf-tab:complete:__zoxide_z:*' fzf-preview 'ls --color $realpath'
 
 
 # ======== エイリアス ========
-alias ls='eza --icons --group-directories-first'
-alias la='eza -a --icons --group-directories-first'
-alias ll='eza -al --icons --group-directories-first'
-alias l='eza -al --icons --group-directories-first'
+# alias ls='eza --icons --group-directories-first'
+# alias la='eza -a --icons --group-directories-first'
+# alias ll='eza -al --icons --group-directories-first'
+# alias l='eza -al --icons --group-directories-first'
+
 # nvim
 alias v='nvim'
 # zshrcを編集する
@@ -130,9 +131,6 @@ eval "$(fzf --zsh)"
 # Zoxide のシェル統合を読み込み（cd の履歴管理）
 eval "$(zoxide init --cmd cd zsh)"
 
-# thefuck
-eval $(thefuck --alias)
-
 # eslint_d
 export ESLINT_USE_FLAT_CONFIG=true
 
@@ -157,10 +155,11 @@ if [ -f "$HOME/.api_keys.sh" ]; then
 fi
 
 
+if [[ "$OSTYPE" == darwin* ]]; then
+  # Added by Windsurf
+  export PATH="/Users/iatik/.codeium/windsurf/bin:$PATH"
+fi
+
 # Starship prompt (プロンプトのカスタマイズ)
 # ファイルの最後に記述する
 eval "$(starship init zsh)"
-
-
-# Added by Windsurf
-export PATH="/Users/iatik/.codeium/windsurf/bin:$PATH"
