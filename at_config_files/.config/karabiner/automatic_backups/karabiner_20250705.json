@@ -88,7 +88,12 @@
                                         "lazy": true
                                     }
                                 ],
-                                "to_if_alone": [{ "key_code": "f18" }],
+                                "to_if_alone": [
+                                    {
+                                        "key_code": "spacebar",
+                                        "modifiers": ["control"]
+                                    }
+                                ],
                                 "to_if_held_down": [{ "key_code": "right_command" }],
                                 "type": "basic"
                             }
