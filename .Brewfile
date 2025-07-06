@@ -50,7 +50,6 @@ cask "font-symbols-only-nerd-font"
 cask "ghostty"
 cask "google-chrome", args: { appdir: "/Applications" }
 cask "karabiner-elements"
-cask "keycastr"
 cask "logseq"
 cask "maccy"
 cask "min"
@@ -59,7 +58,6 @@ cask "postman", args: { appdir: "/Applications" }
 cask "proxyman", args: { appdir: "/Applications" }
 cask "raycast"
 cask "the-unarchiver", args: { appdir: "/Applications" }
-cask "unetbootin"
 cask "utm"
 cask "visual-studio-code", args: { appdir: "/Applications" }
 cask "vlc", args: { appdir: "/Applications" }
