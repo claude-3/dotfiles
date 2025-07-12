@@ -39,7 +39,7 @@ return {
       -- キーマッピングの設定
       mapping = cmp.mapping.preset.insert({
         ["<C-k>"] = cmp.mapping.select_prev_item(), -- previous
-        ["<C-j>"] = cmp.mapping.select_next_item(), -- previous
+        ["<C-j>"] = cmp.mapping.select_next_item(), -- next
         ["<C-b>"] = cmp.mapping.scroll_docs(-4), -- ドキュメントを4行上にスクロール
         ["<C-f>"] = cmp.mapping.scroll_docs(4), -- ドキュメントを4行下にスクロール
         -- ["<C-space>"] = cmp.mapping.complete(), -- show completion suggestions

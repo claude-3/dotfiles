@@ -59,9 +59,14 @@ autoload -U compinit && compinit
 # ======== キー割り当て ========
 # Ctrl+f でオートサジェスチョンを確定
 bindkey '^f' autosuggest-accept
-
 # Ctrl+p で履歴を逆検索
 bindkey '^p' history-search-backward
+
+# if [[ "$OSTYPE" == darwin* ]]; then
+#   # Mac
+# elif [[ "$OSTYPE" == linux* ]]; then
+#   # Linux
+# fi
 
 
 # ======== 履歴の設定 ========
@@ -157,7 +162,7 @@ fi
 
 if [[ "$OSTYPE" == darwin* ]]; then
   # Added by Windsurf
-  export PATH="/Users/iatik/.codeium/windsurf/bin:$PATH"
+  export PATH="~/.codeium/windsurf/bin:$PATH"
 fi
 
 # Starship prompt (プロンプトのカスタマイズ)
