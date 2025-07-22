@@ -32,7 +32,7 @@ config.colors = {
 -- config.font = wezterm.font_with_fallback({
 -- 	"Hack Nerd Font",
 -- })
-config.font_size = 19
+config.font_size = 15
 
 -- and finally, return the configuration to wezterm
 return config
