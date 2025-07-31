@@ -1,0 +1,86 @@
+modmap:
+  - remap:
+      KEY_CAPSLOCK:
+        held: [KEY_LEFTCTRL, KEY_LEFTALT]
+        alone: KEY_ESC
+        alone_timeout_millis: 200
+      KEY_LEFTCTRL:
+        held: [KEY_RIGHTSHIFT, KEY_RIGHTCTRL, KEY_LEFTALT, KEY_LEFTMETA]
+        alone: KEY_ESC
+        alone_timeout_millis: 200
+      KEY_LEFTALT: KEY_RIGHTCTRL
+      # KEY_LEFTALT: KEY_LEFTMETA
+      # KEY_LEFTMETA: KEY_RIGHTCTRL
+      # KEY_LEFTCTRL: KEY_RIGHTCTRL
+      KEY_MUHENKAN: KEY_LEFTALT
+      # KEY_KATAKANAHIRAGANA: KEY_HENKAN
+      # KEY_HENKAN: KEY_F18
+keymap:
+  - name: Input mode change
+    remap:
+      KEY_HENKAN: C-space
+      KEY_MUHENKAN: C-space
+      KEY_KATAKANAHIRAGANA: C-space
+
+  - name: For terminal & neovim keybindings
+    application:
+      only: [/ghostty/]
+    remap:
+      Ctrl_L-M-b: Ctrl_L-b
+      Ctrl_L-M-f: Ctrl_L-f
+      Ctrl_L-M-p: Ctrl_L-p
+      Ctrl_L-M-n: Ctrl_L-n
+      Ctrl_L-M-a: Ctrl_L-a
+      Ctrl_L-M-e: Ctrl_L-e
+      Ctrl_L-M-h: Ctrl_L-h
+      Ctrl_L-M-d: Ctrl_L-d
+      Ctrl_L-M-k: Ctrl_L-k
+      Ctrl_L-M-j: Ctrl_L-j
+      Ctrl_L-M-l: Ctrl_L-l
+      Ctrl_L-M-r: Ctrl_L-r
+
+  - name: Emacs-like key bindings (outside of terminal)
+    application:
+      not: [/ghostty/]
+    remap:
+      # Ctrl_L-M-b: { with_mark: left }
+      # Ctrl_L-M-f: { with_mark: right }
+      # Ctrl_L-M-p: { with_mark: up }
+      # Ctrl_L-M-n: { with_mark: down }
+      # Ctrl_L-M-a: { with_mark: home }
+      # Ctrl_L-M-e: { with_mark: end }
+      # Ctrl_L-M-h: { with_mark: backspace }
+      Ctrl_L-M-b: left
+      Ctrl_L-M-f: right
+      Ctrl_L-M-p: up
+      Ctrl_L-M-n: down
+      Ctrl_L-M-a: home
+      Ctrl_L-M-e: end
+      Ctrl_L-M-h: backspace
+      Ctrl_L-M-d: [delete, { set_mark: false }]
+      Ctrl_L-M-k: [Shift-end, C-x, { set_mark: false }]
+      Ctrl_L-M-c: Ctrl_L-c
+      Ctrl_L-M-v: Ctrl_L-v
+      Ctrl_L-M-tab: Ctrl_L-tab
+
+  - name: When shift is added, reset emacs key bindings
+    remap:
+      SHIFT-Ctrl_L-M-b: SHIFT-Ctrl_L-M-b
+      SHIFT-Ctrl_L-M-f: SHIFT-Ctrl_L-M-f
+      SHIFT-Ctrl_L-M-p: SHIFT-Ctrl_L-M-p
+      SHIFT-Ctrl_L-M-n: SHIFT-Ctrl_L-M-n
+      SHIFT-Ctrl_L-M-a: SHIFT-Ctrl_L-M-a
+      SHIFT-Ctrl_L-M-e: SHIFT-Ctrl_L-M-e
+      SHIFT-Ctrl_L-M-h: SHIFT-Ctrl_L-M-h
+      SHIFT-Ctrl_L-M-d: SHIFT-Ctrl_L-M-d
+      SHIFT-Ctrl_L-M-k: SHIFT-Ctrl_L-M-k
+      SHIFT-Ctrl_L-M-j: SHIFT-Ctrl_L-M-j
+      SHIFT-Ctrl_L-M-l: SHIFT-Ctrl_L-M-l
+      SHIFT-Ctrl_L-M-r: SHIFT-Ctrl_L-M-r
+      SHIFT-Ctrl_L-M-tab: SHIFT-Ctrl_L-M-tab
+
+  - name: Hyper key setting
+    remap:
+      SHIFT-Ctrl_R-M-SUPER-c: Ctrl_L-c
+      SHIFT-Ctrl_R-M-SUPER-v: Ctrl_L-v
+      SHIFT-Ctrl_R-M-SUPER-x: Ctrl_L-x

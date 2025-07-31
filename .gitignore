@@ -31,6 +31,8 @@
 !/at_config_files/.config/yazi/**
 !/at_config_files/.config/karabiner/
 !/at_config_files/.config/karabiner/**
+!/at_config_files/.config/xremap/
+!/at_config_files/.config/xremap/**
 
 !/at_config_files/.config/starship.toml
 
