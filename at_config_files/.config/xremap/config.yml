@@ -6,7 +6,7 @@ modmap:
         alone_timeout_millis: 200
       KEY_LEFTCTRL:
         held: [KEY_RIGHTSHIFT, KEY_RIGHTCTRL, KEY_LEFTALT, KEY_LEFTMETA]
-        alone: KEY_ESC
+        alone: KEY_LEFTMETA
         alone_timeout_millis: 200
       KEY_LEFTALT: KEY_RIGHTCTRL
       # KEY_LEFTALT: KEY_LEFTMETA
@@ -62,6 +62,8 @@ keymap:
       Ctrl_L-M-c: Ctrl_L-c
       Ctrl_L-M-v: Ctrl_L-v
       Ctrl_L-M-tab: Ctrl_L-tab
+      Ctrl_L-M-semicolon: Ctrl_L-semicolon
+      Ctrl_L-M-apostrophe: Ctrl_L-apostrophe
 
   - name: When shift is added, reset emacs key bindings
     remap:
@@ -84,3 +86,4 @@ keymap:
       SHIFT-Ctrl_R-M-SUPER-c: Ctrl_L-c
       SHIFT-Ctrl_R-M-SUPER-v: Ctrl_L-v
       SHIFT-Ctrl_R-M-SUPER-x: Ctrl_L-x
+      SHIFT-Ctrl_R-M-SUPER-tab: M-tab
