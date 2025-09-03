@@ -61,6 +61,7 @@ keymap:
       Ctrl_L-M-k: [Shift-end, C-x, { set_mark: false }]
       Ctrl_L-M-c: Ctrl_L-c
       Ctrl_L-M-v: Ctrl_L-v
+      Ctrl_L-M-l: Ctrl_L-l
       Ctrl_L-M-tab: Ctrl_L-tab
       Ctrl_L-M-semicolon: Ctrl_L-semicolon
       Ctrl_L-M-apostrophe: Ctrl_L-apostrophe
