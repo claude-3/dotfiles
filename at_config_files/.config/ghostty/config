@@ -1,11 +1,14 @@
 
 font-family = "Hack Nerd Font Mono"
 # =========== Theme - Start ==================
-theme = rose-pine-moon
-# theme = rose-pine-moon
-# theme = rose-pine-dawn
-# https://github.com/rose-pine/ghostty
-# theme = ayu
+# Automatic dark/light switching
+# theme = dark:Rose Pine,light:Rose Pine Dawn
+
+# Or set individual themes
+# theme = Rose Pine
+theme = Rose Pine Moon
+# theme = Rose Pine Dawn
+
 
 # --- Color Palette ---
 # Muted
