@@ -5,21 +5,20 @@ modmap:
         alone: KEY_ESC
         alone_timeout_millis: 200
       KEY_LEFTCTRL:
-        held: [KEY_RIGHTSHIFT, KEY_RIGHTCTRL, KEY_LEFTALT, KEY_LEFTMETA]
-        alone: KEY_LEFTMETA
+        held: [KEY_RIGHTSHIFT, KEY_RIGHTCTRL, KEY_LEFTALT, Super_L]
+        alone: Super_L
         alone_timeout_millis: 200
-      KEY_LEFTALT: KEY_RIGHTCTRL
-      # KEY_LEFTALT: KEY_LEFTMETA
-      # KEY_LEFTMETA: KEY_RIGHTCTRL
-      # KEY_LEFTCTRL: KEY_RIGHTCTRL
-      KEY_MUHENKAN: KEY_LEFTALT
+      # KEY_LEFTALT: KEY_RIGHTCTRL
+      Super_L: Alt_L
+      Alt_L: Ctrl_R
+      KEY_MUHENKAN: Super_L
       # KEY_KATAKANAHIRAGANA: KEY_HENKAN
       # KEY_HENKAN: KEY_F18
 keymap:
   - name: Input mode change
     remap:
+      # KEY_MUHENKAN: C-space
       KEY_HENKAN: C-space
-      KEY_MUHENKAN: C-space
       KEY_KATAKANAHIRAGANA: C-space
 
   - name: For terminal & neovim keybindings
