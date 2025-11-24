@@ -1,35 +1,14 @@
 return {
-  "mason-org/mason.nvim",
-  dependencies = {
+  {
+    -- 各lspサーバーをインストールする機能
     "mason-org/mason-lspconfig.nvim",
-    "WhoIsSethDaniel/mason-tool-installer.nvim",
-  },
-  config = function()
-    -- import mason
-    local mason = require("mason")
-
-    -- import mason-lspconfig
-    local mason_lspconfig = require("mason-lspconfig")
-
-    -- import mason-tool-installer
-    local mason_tool_installer = require("mason-tool-installer")
-
-    -- enable mason and configure icons
-    mason.setup({
-      ui = {
-        icons = {
-          package_installed = "✓",
-          package_pending = "➜",
-          package_uninstalled = "✗",
-        },
-      },
-    })
-
-    mason_lspconfig.setup({
+    opts = {
       -- list of servers for mason to install
       ensure_installed = {
         -- "tsserver", -- javascript, typescript
-        "vtsls", -- javascript, typescript
+        -- "vtsls", -- javascript, typescript
+        "ts_ls",
+        "biome", -- js/ts linter & formatter
         "html",
         "cssls",
         "tailwindcss",
@@ -38,17 +17,33 @@ return {
         "prismals", -- prisma
         "pyright", -- python
         "intelephense", -- php
-        "graphql",
+        -- "graphql",
         "dockerls",
         "jsonls",
-        "biome", -- js/ts linter & formatter
         -- "eslint",
         -- "astro",
       },
-      automatic_enable = true,
-    })
-
-    mason_tool_installer.setup({
+    },
+    dependencies = {
+      {
+        -- UIで使うアイコンを設定
+        "mason-org/mason.nvim",
+        opts = {
+          ui = {
+            icons = {
+              package_installed = "✓",
+              package_pending = "➜",
+              package_uninstalled = "✗",
+            },
+          },
+        },
+      },
+      "neovim/nvim-lspconfig",
+    },
+  },
+  {
+    "WhoIsSethDaniel/mason-tool-installer.nvim",
+    opts = {
       ensure_installed = {
         "prettier", -- prettier formatter
         -- "eslint_d", -- js/ts linter
@@ -59,6 +54,9 @@ return {
         "pylint", -- python linter
         "phpstan", -- php linter
       },
-    })
-  end,
+    },
+    dependencies = {
+      "mason-org/mason.nvim",
+    },
+  },
 }
