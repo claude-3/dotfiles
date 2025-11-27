@@ -12,14 +12,14 @@ modmap:
       Super_L: Alt_L
       Alt_L: Ctrl_R
       KEY_MUHENKAN: Super_L
-      # KEY_KATAKANAHIRAGANA: KEY_HENKAN
+      KEY_KATAKANAHIRAGANA: KEY_HENKAN
       # KEY_HENKAN: KEY_F18
 keymap:
   - name: Input mode change
     remap:
       # KEY_MUHENKAN: C-space
-      KEY_HENKAN: C-space
-      KEY_KATAKANAHIRAGANA: C-space
+      # KEY_HENKAN: C-space
+      # KEY_KATAKANAHIRAGANA: C-space
 
   - name: For terminal & neovim keybindings
     application:
