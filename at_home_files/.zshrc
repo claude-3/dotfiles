@@ -165,6 +165,11 @@ if [[ "$OSTYPE" == darwin* ]]; then
   export PATH="~/.codeium/windsurf/bin:$PATH"
 fi
 
+if [[ "$OSTYPE" == linux* ]]; then
+  # // For Zed path
+  export PATH=$HOME/.local/bin:$PATH
+fi
+
 # Starship prompt (プロンプトのカスタマイズ)
 # ファイルの最後に記述する
 eval "$(starship init zsh)"
