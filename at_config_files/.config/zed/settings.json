@@ -11,13 +11,13 @@
     "default_model": {
       "provider": "zed.dev",
       "model": "claude-3-7-sonnet-latest"
-    },
+    }
   },
   "theme": "Rosé Pine Moon",
   "vim_mode": true,
   "ui_font_size": 16,
   "buffer_font_size": 16,
-  "buffer_font_family": "Hack Nerd Font",
+  "buffer_font_family": "HackGen Console NF",
   "relative_line_numbers": "enabled",
   "soft_wrap": "editor_width",
   "terminal": {
