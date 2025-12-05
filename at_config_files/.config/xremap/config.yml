@@ -15,11 +15,11 @@ modmap:
       KEY_KATAKANAHIRAGANA: KEY_HENKAN
       # KEY_HENKAN: KEY_F18
 keymap:
-  - name: Input mode change
-    remap:
-      # KEY_MUHENKAN: C-space
-      # KEY_HENKAN: C-space
-      # KEY_KATAKANAHIRAGANA: C-space
+  # - name: Input mode change
+  #   remap:
+  # KEY_MUHENKAN: C-space
+  # KEY_HENKAN: C-space
+  # KEY_KATAKANAHIRAGANA: C-space
 
   - name: For terminal & neovim keybindings
     application:
@@ -84,6 +84,6 @@ keymap:
   - name: Hyper key setting
     remap:
       SHIFT-Ctrl_R-M-SUPER-c: Ctrl_L-c
-      SHIFT-Ctrl_R-M-SUPER-v: Ctrl_L-v
+      SHIFT-Ctrl_R-M-SUPER-v: Shift-Ctrl_L-v
       SHIFT-Ctrl_R-M-SUPER-x: Ctrl_L-x
       SHIFT-Ctrl_R-M-SUPER-tab: M-tab
