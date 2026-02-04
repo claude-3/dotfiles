@@ -23,6 +23,7 @@
 !/backup_settings/
 !/backup_settings/**
 
+!/fedora/
 !/fedora/**
 
 !/at_config_files/

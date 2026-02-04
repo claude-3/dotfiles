@@ -1,0 +1,19 @@
+# Settings for Fedora/Gnome
+
+# ===== パッケージ管理の直感化 =====
+alias install='sudo dnf install -y'
+alias remove='sudo dnf remove -y'
+alias update='sudo dnf upgrade --refresh -y'
+alias search='dnf search'
+
+# ===== macOSのopenコマンドを再現する関数 =====
+# - ディレクトリやファイルをFedoraが最適なアプリで開いてくれる
+open() {
+    local target=${1:-.}
+    (xdg-open "$target" > /dev/null 2>&1 &)
+}
+
+# ===== 自作スクリプトにパスを通す =====
+if [ -d "$HOME/MyScripts" ]; then
+    export PATH="$HOME/MyScripts:$PATH"
+fi
