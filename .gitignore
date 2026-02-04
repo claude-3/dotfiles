@@ -23,6 +23,8 @@
 !/backup_settings/
 !/backup_settings/**
 
+!/fedora/**
+
 !/at_config_files/
 !/at_config_files/.config/
 !/at_config_files/.config/nvim/

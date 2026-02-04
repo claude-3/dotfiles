@@ -170,6 +170,12 @@ if [[ "$OSTYPE" == linux* ]]; then
   export PATH=$HOME/.local/bin:$PATH
 fi
 
+# ===== ローカル固有の設定があれば読み込む =====
+if [ -f ~/.zshrc.local ]; then
+    source ~/.zshrc.local
+fi
+
+
 # Starship prompt (プロンプトのカスタマイズ)
 # ファイルの最後に記述する
 eval "$(starship init zsh)"
