@@ -28,6 +28,8 @@ opt.scrolloff = 10
 -- opt.ignorecase = true
 -- opt.smartcase = true
 
+opt.autoread = true -- enable detection of external changes
+
 opt.cursorline = true
 
 -- turn on termguicolors for tokyonight colorscheme to work
