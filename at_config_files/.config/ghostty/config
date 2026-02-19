@@ -50,6 +50,7 @@ palette = 12=#9ccfd8
 # palette = 15=#e0def4
 
 background = #000000
+# background = #1e1f1f
 
 # foreground = #c6d0f5
 # cursor-color = #f2d5cf
@@ -58,7 +59,7 @@ background = #000000
 # selection-foreground = #c6d0f5
 # =========== Theme - End ==================
 
-font-size = 15
+font-size = 14
 
 window-theme = dark
 
@@ -70,11 +71,9 @@ macos-titlebar-style = tabs
 window-padding-x = 8
 
 # 背景の透明度
-# background-opacity = 0.84
-background-opacity = 0.64
+background-opacity = 0.96
 # 背景のぼかし
-# background-blur-radius = 72
-background-blur-radius = 48
+background-blur-radius = 20
 
 # ======== Quick Terminal ========
 # quick-terminal-position = top
@@ -82,3 +81,7 @@ background-blur-radius = 48
 
 # ======= Keybind ========
 keybind = ctrl+g>r=reload_config
+
+# OS固有の設定ファイル
+config-file = ?config-linux
+config-file = ?config-mac

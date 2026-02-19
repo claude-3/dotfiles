@@ -9,9 +9,10 @@ modmap:
         alone: Super_L
         alone_timeout_millis: 200
       # KEY_LEFTALT: KEY_RIGHTCTRL
-      Super_L: Alt_L
+      # Super_L: Alt_L
       Alt_L: Ctrl_R
-      KEY_MUHENKAN: Super_L
+      # KEY_MUHENKAN: Super_L
+      KEY_MUHENKAN: Alt_L
       KEY_KATAKANAHIRAGANA: KEY_HENKAN
       # KEY_HENKAN: KEY_F18
 keymap:
